@@ -64,5 +64,6 @@ onUnmounted(() => {
         Save Fact
       </button>
     </div>
+    <popover :facts="saved" />
   </main>
 </template>
