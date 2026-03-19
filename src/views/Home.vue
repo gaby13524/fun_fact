@@ -45,23 +45,21 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="flex flex-col items-center justify-center gap-4 min-h-screen">
-    <h1 class="text-7xl">Fun Facts About Me!</h1>
-    <p class="text-3xl">{{ funFact[currIndex] }}</p>
-    <div class="p-3 flex gap-3">
-      <button
-        class="hover:bg-green-400 bg-green-300 rounded-full min-w-20 text-sm p-3 gray-600"
-        @click="toggleStop"
-      >
-        {{ stopped ? "Continue" : "Stop" }}
-      </button>
-      <button
-        v-if="stopped"
-        @click="saveFact(funFact[currIndex]!)"
-        class="hover:bg-rose-400 bg-rose-300 rounded-full text-sm p-3 gray-600"
-      >
-        Save Fact
-      </button>
-    </div>
-  </main>
+  <h1 class="text-7xl">Fun Facts About Me!</h1>
+  <p class="text-3xl">{{ funFact[currIndex] }}</p>
+  <div class="p-3 flex gap-3">
+    <button
+      class="hover:bg-green-400 bg-green-300 rounded-full min-w-20 text-sm p-3 gray-600"
+      @click="toggleStop"
+    >
+      {{ stopped ? "Continue" : "Stop" }}
+    </button>
+    <button
+      v-if="stopped"
+      @click="saveFact(funFact[currIndex]!)"
+      class="hover:bg-rose-400 bg-rose-300 rounded-full text-sm p-3 gray-600"
+    >
+      Save Fact
+    </button>
+  </div>
 </template>

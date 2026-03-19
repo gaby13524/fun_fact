@@ -5,6 +5,8 @@ import Popover from "@/assets/components/Popover.vue";
 </script>
 
 <template>
-  <Popover />
-  <RouterView />
+  <main class="flex flex-col items-center justify-center gap-4 min-h-screen">
+    <Popover />
+    <RouterView />
+  </main>
 </template>
